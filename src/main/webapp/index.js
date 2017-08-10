@@ -11,34 +11,34 @@ xhrGet("SimpleServlet", function(responseText){
 	console.log(err);
 });
 
-//main
+// search
 function search(){
 
-	var mytext = document.getElementById('inputtext');
-	alert(mytext);
-	xhrGet("GetNlcServlet", mytext);
+	// get Text
+	var inputtext = document.forms.inputForm.inputText.value;
+	alert(inputtext);
 
-	var res = document.getElementById('nlc');
-	res.innerHTML = mytext;
-
+	// Execute Query
+	var url = "GetNlcServlet?inputtext=" + inputtext ;
+	getMessage(url);
 }
 
-function getMessage(url, callback, errback){
+function getMessage(url){
 	var xhr = new createXHR();
 	xhr.open("GET", url, true);
 	xhr.onreadystatechange = function(){
 		if(xhr.readyState == 4){
 			if(xhr.status == 200){
-				callback(xhr.responseText);
-			}else{
-				errback('service not available');
+				var res = document.getElementById('nlc');
+				res.innerHTML = xhr.responseText;
 			}
 		}
 	};
-	xhr.timeout = 3000;
-	xhr.ontimeout = errback;
+	xhr.timeout = 300000;
+//	xhr.ontimeout = errback;
 	xhr.send();
 }
+
 
 //utilities
 function createXHR(){
