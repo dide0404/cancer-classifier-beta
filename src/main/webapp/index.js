@@ -37,16 +37,6 @@ function getMessage(url){
 				var output = "";
 
 				output += "<table border=1>";				
-				output += "<tr><td colspan=2><div align=center>";
-				output += "Input Text： ";
-				output += res.text;
-				output += "<br>";
-
-				output += "Class： ";
-				output += res.top_class;
-				output += "<br>";
-				output += "</div></td></tr><br>";
-												
 				output += "<tr><td>Class</td><td>Confidence</td></tr><br>";
 				
 				for (i = 0; i < res.classes.length; i++) {
