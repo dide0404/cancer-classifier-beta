@@ -31,9 +31,9 @@ public class GetNlcServlet extends HttpServlet {
     	Classification classification = service.classify("ad940bx206-nlc-1685", inputstr).execute();
 
     	String outstr = classification.toString();
-    	response.setContentType("text/html");
+//    	response.setContentType("text/html");
+    	response.setContentType("text/html; charset=UTF-8"); 
         response.getWriter().print(outstr);
         
     }
-
 }

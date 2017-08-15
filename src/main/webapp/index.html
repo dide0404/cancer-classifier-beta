@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Cancer Classifier Beta</title>
+	<title>WATSON Cancer Classifier (Demo)</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="tabulator.css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,700' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 </head>
 <body>
 	<table>
 		<tr>
 			<td style='width: 30%;'>
-				<img class = "newappIcon" src='images/newapp-icon.png'>
+				<img class = "newappIcon" src='images/ibm_watson.png'>
 			</td>
 			<td>
-				<!-- The "Hello World!" message comes from /SimpleServlet -->
-				<h1 id = "result"></h1>				
-				<p class='description'></p> Thanks for creating a <span class="blue">Liberty for Java Starter Application</span>.
+				<h2> WATSON Cancer Classifier (Demo) </h2>
+				<p class='description'></p> Input the monograph title and press submit button.<br> 
+				<span class="blue"> WATSON will answer the Cancer Category.</span>
 			</td>
 		</tr>
 		<tr>
@@ -22,14 +27,17 @@
 			</td>
 			<td>
 			<form name="form1" id="inputForm" action="">
-				<input type="text" name="inputtext" id="inputText" value="">
-				<input type="button" value="照会" onclick="search()"><br>	
+				<input type="text" name="inputtext" id="inputText" value="" size="50"">
+				<input type="button" value="submit" onclick="search()"><br>	
+				<input type="text" name="dummy" value="" size="0" style="visibility:hidden">
 			</form>
 			</td>
 		</tr>
 	</table>
-	<h2 id="nlc"></h2>
+	<div valign=top align=center  id="nlcresult"></div>
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
