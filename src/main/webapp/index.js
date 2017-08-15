@@ -22,7 +22,7 @@ function go(){
 function search(){
 
 	var inputtext = document.forms.inputForm.inputText.value;
-	var url = "GetNlcServlet?inputtext=" + inputtext ;
+	var url = "GetNlcServlet?inputtext=" + encodeURI(inputtext) ;
 	getMessage(url);
 }
 

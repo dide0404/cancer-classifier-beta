@@ -1,6 +1,7 @@
 package wasdev.sample.servlet;
 
 import java.io.IOException;
+import java.net.URLDecoder; 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,7 +24,8 @@ public class GetNlcServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-    	String inputstr = request.getParameter("inputtext");
+    	String input = request.getParameter("inputtext");
+    	String inputstr = URLDecoder.decode(input, "UTF-8");
 
     	NaturalLanguageClassifier service = new NaturalLanguageClassifier();
     	service.setUsernameAndPassword("88456ddd-9ce9-485e-99ec-83b97e492a8c", "e5aXyoChlHnN");
