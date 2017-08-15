@@ -33,18 +33,20 @@
                 <artifactId>geronimo-servlet_3.0_spec</artifactId>
                 <version>1.0</version>
             </dependency>
-   			<dependency>
-            	<groupId>servlet-api</groupId>
-            	<artifactId>servlet-api</artifactId>
-            	<version>4.0</version>
+			<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+			<dependency>
+    			<groupId>javax.servlet</groupId>
+    			<artifactId>javax.servlet-api</artifactId>
+    			<version>3.1.0</version>
             	<scope>compile</scope>
-        	</dependency>
-        	<dependency>
-           	 	<groupId>java-sdk</groupId>
-            	<artifactId>java-sdk</artifactId>
-            	<version>3.8.0</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/com.ibm.watson.developer_cloud/natural-language-classifier -->
+			<dependency>
+    			<groupId>com.ibm.watson.developer_cloud</groupId>
+    			<artifactId>natural-language-classifier</artifactId>
+    			<version>3.8.0</version>
             	<scope>compile</scope>
-        	</dependency>
+			</dependency>
         </dependencies>
     </dependencyManagement>
 
