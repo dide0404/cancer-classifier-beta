@@ -38,14 +38,12 @@
     			<groupId>javax.servlet</groupId>
     			<artifactId>javax.servlet-api</artifactId>
     			<version>3.1.0</version>
-            	<scope>compile</scope>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/com.ibm.watson.developer_cloud/natural-language-classifier -->
 			<dependency>
     			<groupId>com.ibm.watson.developer_cloud</groupId>
     			<artifactId>natural-language-classifier</artifactId>
     			<version>3.8.0</version>
-            	<scope>compile</scope>
 			</dependency>
         </dependencies>
     </dependencyManagement>
@@ -56,6 +54,16 @@
             <artifactId>geronimo-servlet_3.0_spec</artifactId>
             <scope>provided</scope>
         </dependency>
+		<dependency>
+   			<groupId>javax.servlet</groupId>
+   			<artifactId>javax.servlet-api</artifactId>
+           	<scope>compile</scope>
+		</dependency>
+		<dependency>
+   			<groupId>com.ibm.watson.developer_cloud</groupId>
+   			<artifactId>natural-language-classifier</artifactId>
+           	<scope>compile</scope>
+		</dependency>
     </dependencies>
 
     <build>
