@@ -12,17 +12,11 @@ xhrGet("SimpleServlet", function(responseText){
 });
 */
 
-// Textbox の enterkeyイベントを拾うための小細工
-function go(){
-//	if(window.event.keyCode==13)search();
-	if(window.event.keyCode==13)return false;
-}
-
 // search
 function search(){
 
 	var inputtext = document.forms.inputForm.inputText.value;
-	var url = "GetNlcServlet?inputtext=" + encodeURI(inputtext) ;
+	var url = "GetNlcServlet?inputtext=" + encodeURIComponent(inputtext) ;
 	getMessage(url);
 }
 

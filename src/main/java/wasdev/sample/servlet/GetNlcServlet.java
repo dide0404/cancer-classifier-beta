@@ -25,7 +25,10 @@ public class GetNlcServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     	String input = request.getParameter("inputtext");
+    	System.out.println("inputtext: " + input);
+    	
     	String inputstr = URLDecoder.decode(input, "UTF-8");
+    	System.out.println("inputstr: " + inputstr);
 
     	NaturalLanguageClassifier service = new NaturalLanguageClassifier();
     	service.setUsernameAndPassword("88456ddd-9ce9-485e-99ec-83b97e492a8c", "e5aXyoChlHnN");
